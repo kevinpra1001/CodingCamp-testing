@@ -1,1 +1,2 @@
 # CodingCamp-testing
+mini project
