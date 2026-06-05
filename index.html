@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo Life Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="dashboard">
+
+    <!-- Greeting Widget -->
+    <section id="greeting-widget" class="widget" aria-label="Greeting">
+      <h2 id="greeting-text" class="greeting"></h2>
+      <p id="greeting-time" class="clock"></p>
+      <p id="greeting-date" class="date"></p>
+    </section>
+
+    <!-- Timer Widget -->
+    <section id="timer-widget" class="widget" aria-label="Focus Timer">
+      <h2 class="widget-heading">Focus Timer</h2>
+      <p id="timer-display" class="timer-display">25:00</p>
+      <div class="timer-controls">
+        <button id="timer-start" type="button">Start</button>
+        <button id="timer-stop" type="button" disabled>Stop</button>
+        <button id="timer-reset" type="button">Reset</button>
+      </div>
+    </section>
+
+    <!-- To-Do Widget -->
+    <section id="todo-widget" class="widget" aria-label="To-Do List">
+      <h2 class="widget-heading">To-Do List</h2>
+      <div class="todo-add-form">
+        <label for="todo-input" class="visually-hidden">New task description</label>
+        <input
+          id="todo-input"
+          type="text"
+          placeholder="Add a new task…"
+          maxlength="500"
+          autocomplete="off"
+        />
+        <button id="todo-add-btn" type="button">Add</button>
+      </div>
+      <div id="todo-error" class="error-message" role="alert" aria-live="polite"></div>
+      <ul id="todo-list" class="todo-list" aria-label="Tasks"></ul>
+    </section>
+
+    <!-- Quick Links Widget -->
+    <section id="quicklinks-widget" class="widget" aria-label="Quick Links">
+      <h2 class="widget-heading">Quick Links</h2>
+      <div class="quicklinks-add-form">
+        <label for="quicklinks-label-input">Label</label>
+        <input
+          id="quicklinks-label-input"
+          type="text"
+          placeholder="Link label"
+          maxlength="50"
+          autocomplete="off"
+        />
+        <label for="quicklinks-url-input">URL</label>
+        <input
+          id="quicklinks-url-input"
+          type="url"
+          placeholder="https://example.com"
+          maxlength="2048"
+          autocomplete="off"
+        />
+        <button id="quicklinks-add-btn" type="button">Add</button>
+      </div>
+      <div id="quicklinks-error" class="error-message" role="alert" aria-live="polite"></div>
+      <div id="quicklinks-panel" class="quicklinks-panel" aria-label="Quick links list"></div>
+    </section>
+
+  </main>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
